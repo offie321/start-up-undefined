@@ -1,0 +1,88 @@
+body{
+  background-color: #23272a;
+}
+
+
+/*Height needs to be removed*/
+.carousel-item{
+  height: 50vh;
+}
+
+.a-cards-container{
+display: grid;
+grid-template-columns:auto;
+width: 90vw;
+grid-gap: 15px;
+margin: 0 auto;
+}
+
+.a-cards-container .a-cards{
+  width: 275px;
+  height: auto;
+  margin: 0 auto;
+  background-color: #2c2f33;
+  text-align: center;
+  color: white;
+  overflow: hidden;
+  border-radius: 15px;
+  padding: 20px;
+  transition: 0.25s;
+
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+}
+
+.a-cards img{
+  width: 100%;
+}
+
+.a-cards:hover{
+  -webkit-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.75);
+  box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.75);
+  transition: 0.25s;
+  cursor: pointer;
+}
+
+
+/*
+// Extra small devices (portrait phones, less than 576px)
+// No media query for `xs` since this is the default in Bootstrap
+*/
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+  .a-cards-container{
+  grid-template-columns: auto auto;
+
+ }
+
+/* Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) {
+
+  .a-cards-container{
+  grid-template-columns: auto auto;
+
+ }
+
+ }
+
+/* Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) {
+
+  .a-cards-container{
+  grid-template-columns: auto  auto auto;
+
+ }
+
+ }
+
+/* Extra large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) {
+
+  .a-cards-container{
+  grid-template-columns: auto auto auto auto;
+
+ }
+
+ }
