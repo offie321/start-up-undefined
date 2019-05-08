@@ -73,7 +73,7 @@ if ($_SESSION['ingelogd'] = true) {
   <?php
   //Stap 2, 3 en 4
   $sql =
-  "SELECT games.titel, games.plaatjes, games.omschrijving, games.ranking
+  "SELECT games.titel, games.plaatjes, games.omschrijving, games.ranking, games.id
   FROM games
   LIMIT 8;
 
