@@ -45,10 +45,10 @@ if ($conn->connect_error) {
       <!-- nav -->
       <div class="nav-container">
         <nav>
-          <a class="hover-underline-animation"  href="#">Home</a>
+          <a class="hover-underline-animation"  href="index.php">Home</a>
           <a class="hover-underline-animation"  href="#">Page 2</a>
           <a class="hover-underline-animation"  href="#">Page 3</a>
-          <a class="hover-underline-animation" href="#">Login</a>
+          <a class="hover-underline-animation" href="login.php">Login</a>
         </nav>
       </div>
 
