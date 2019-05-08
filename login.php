@@ -57,9 +57,9 @@ if (isset($_POST['submit'])) {
       </div>
 
     </header>
-    <div class="spacer">
-
-    </div>
+    <div class="spacer"></div>
+    <div class="spacer"></div>
+    <div class="spacer"></div>
 
     <h1 class="login-titel" >Login</h1>
     <form class="login-form" method="post">

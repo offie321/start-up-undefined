@@ -17,15 +17,6 @@ if (isset($_SESSION['user'])) {
      <meta charset="utf-8">
      <title>ingelogd php</title>
 
-     <style media="screen">
-
-      h1{
-        text-align: center;
-      }
-
-
-     </style>
-
      <!-- css -->
      <link rel="stylesheet" href="css/style.css">
 
@@ -47,10 +38,10 @@ if (isset($_SESSION['user'])) {
        </div>
 
      </header>
-     <div class="spacer">
-
-     </div>
+     <div class="spacer"></div>
 
      <?php echo "<h1> Welkom". " ".$_SESSION['user']." " ."op deze pagina </h1>" ?>
+
+     <a class="uitlog-knop" href="logout.php">uitloggen</a>
    </body>
  </html>

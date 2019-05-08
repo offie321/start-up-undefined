@@ -45,7 +45,7 @@ nav{
   position: relative;
   margin: 0 auto;
   display: flex;
-  height:50px;
+  height:60px;
   width: 60vw;
   top: 0;
   justify-content: space-around;
@@ -55,7 +55,7 @@ nav{
 nav a{
   text-decoration: none;
   color: black;
-  line-height: 50px;
+  line-height: 60px;
 }
 
 nav a .right{
@@ -71,7 +71,7 @@ nav a .right{
 
 .a-cards-container{
 display: grid;
-grid-template-columns:auto;
+grid-template-columns:auto auto auto auto;
 width: 90vw;
 grid-gap: 15px;
 margin: 0 auto;
@@ -108,6 +108,19 @@ margin: 0 auto;
   cursor: pointer;
 }
 
+/*----- Ranking -----*/
+
+.ranking{
+  background-color: #444444;
+  border-radius: 50%;
+  text-align: center;
+  width: 25px;
+  height: 25px;
+  line-height: 25px;
+  margin: 0 auto;
+  color: black;
+}
+
 
 /* ---------login--------- */
 .login-titel{
@@ -128,51 +141,185 @@ margin: 0 auto;
 
 .login-form input{
   margin: 25px;
-  background-color: grey;
+  background-color: #444444;
   border: 2px solid grey;
   padding: 5px;
   text-align: center;
   border-radius: 25px;
+  color: lightgrey;
 }
 
 
-/*
-// Extra small devices (portrait phones, less than 576px)
-// No media query for `xs` since this is the default in Bootstrap
-*/
-/* Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) {
+/*Footer*/
+.h3-ftr-logo{
+  font-family: 'Anton', sans-serif;
+  font-size: 50px;
+}
+
+footer{
+  background-color: rgb(80, 80, 80);
+  height: auto;
+  text-align: center;
+  color: rgb(5, 5, 5);
+}
+
+.footer-container{
+  max-width: 1500px;
+  padding: 50px;
+  margin: 0 auto;
+  height: auto;
+  display: flex;
+  justify-content: space-around;
+}
+
+.social-icons-ftr{
+  font-size: 75px;
+}
+
+hr {
+  display: block;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  margin-left: auto;
+  margin-right: auto;
+  border-style: inset;
+  border-width: 1px;
+  width: 75vw;
+}
+
+.footer-list{
+  float:left;
+  text-align: left;
+  list-style: none;
+  min-width: 175px;
+}
+
+.mail-ftr i, .github-ftr i, .linkedin-ftr i{
+  transition: 0.25s;
+}
+
+.mail-ftr i:hover{
+  background-color: #c71610;
+  transition: 0.5s;
+}
+
+.linkedin-ftr i:hover{
+  background-color: #0077B5;
+  transition: 0.5s;
+}
+
+.github-ftr i:hover{
+  background-color: #333;
+  transition: 0.5s;
+}
+
+.footer-list a{
+  text-decoration: none;
+  color: rgb(5, 5, 5);
+}
+
+.footer-list a:hover{
+
+}
+
+.footer-list li{
+  padding: 10px;
+}
+
+.footer-list:nth-child(1){
+  padding-right: 50px;
+
+}
+
+.footer-list:nth-child(2){
+  border-left: 2px solid rgb(20, 20, 20);
+  padding-right: 50px;
+  padding-left: 50px;
+}
+
+.footer-list:nth-child(3){
+  border-left: 2px solid rgb(20, 20, 20);
+  padding-left: 50px;
+}
+
+.footer-list i{
+  font-size: 25px;
+  height:40px;
+  width: 40px;
+  background-color: rgb(65,65,65);
+  line-height: 40px;
+  text-align: center;
+  border-radius: 50%;
+}
+
+
+.ftr-copy{
+    width: 50vw;
+    text-align: center;
+    margin: 0 auto;
+}
+
+
+.copy-container{
+  background-color: rgb(65, 65, 65);
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+
+
+@media only screen and (max-width:1500px) {
+
+.a-cards-container{
+  grid-template-columns: auto auto auto;
+}
+
+
+}
+
+@media only screen and (max-width:1100px) {
   .a-cards-container{
-  grid-template-columns: auto auto;
+    grid-template-columns: auto auto;
+  }
 
- }
+  .footer-container{
+  flex-direction: column;
+  padding: 10px;
+}
 
-/* Medium devices (tablets, 768px and up)*/
-@media (min-width: 768px) {
+.footer-list{
+  max-width: 60%;
+  text-align: center;
+  margin: 0 auto;
+  padding-top: 25px;
+}
 
+.footer-list:nth-child(1){
+  border: none;
+  padding: 0;
+  padding-top: 25px;
+}
+
+.footer-list:nth-child(2){
+  border: none;
+}
+
+.footer-list:nth-child(3){
+  border: none;
+  padding: 0;
+  padding-top: 25px;
+}
+}
+
+@media only screen and (max-width:750px) {
   .a-cards-container{
-  grid-template-columns: auto auto;
+    grid-template-columns: auto;
+  }
+}
 
- }
-
- }
-
-/* Large devices (desktops, 992px and up)*/
-@media (min-width: 992px) {
-
+@media only screen and (max-width:400px) {
   .a-cards-container{
-  grid-template-columns: auto  auto auto;
-
- }
-
- }
-
-/* Extra large devices (large desktops, 1200px and up)*/
-@media (min-width: 1200px) {
-
-  .a-cards-container{
-  grid-template-columns: auto auto auto auto;
-
- }
-
- }
+    grid-template-columns: auto;
+  }
+}
