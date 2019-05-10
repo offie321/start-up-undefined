@@ -150,6 +150,50 @@ margin: 0 auto;
 }
 
 
+
+/*ingelogde pagina*/
+
+/* Style tab links */
+.tablink {
+  background-color: #555;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: auto;
+  position: relative;
+}
+
+.boxbtns{
+  display: flex;
+  justify-content: space-around;
+  width: 50vw;
+  margin: 0 auto;
+  background-color: #333333;
+}
+
+.tablink:hover {
+  background-color: #777;
+
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+  color: white;
+  display: none;
+  padding: 100px 20px;
+  height: 50vh;
+  width: 75vw;
+  margin: 0 auto;
+  position: relative;
+  overflow-y: auto;
+}
+
+#Home, #News, #Contact, #About {background-color: #777777;}
+
 /*Footer*/
 .h3-ftr-logo{
   font-family: 'Anton', sans-serif;
