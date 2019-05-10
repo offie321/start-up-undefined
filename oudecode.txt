@@ -10,12 +10,12 @@ if ($_SESSION['ingelogd'] = true) {
 }
 
  ?>
-
+^^^^^^^^^^^^^^^^^^^^^^^^
  was voor displayen van username op index.php
 
 
 
 
  <?php echo "<a style='float:right;' class='hover-underline-animation' href='ingelogd.php'>".$_SESSION['user']."</a>" ?>
-
- stond in nav 
+^^^^^^^^^^^^^^^^^^
+ stond in nav
