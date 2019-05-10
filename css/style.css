@@ -228,7 +228,8 @@ hr {
   margin-right: auto;
   border-style: inset;
   border-width: 1px;
-  width: 75vw;
+  width: 85%;
+  text-align: center;
 }
 
 .footer-list{
