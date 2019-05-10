@@ -153,6 +153,14 @@ margin: 0 auto;
 
 /*ingelogde pagina*/
 
+.addcontent-form{
+
+}
+
+.addcontent-form textarea{
+  width: 500px;
+}
+
 /* Style tab links */
 .tablink {
   background-color: #555;
@@ -185,7 +193,6 @@ margin: 0 auto;
   color: white;
   display: none;
   padding: 100px 20px;
-  height: 50vh;
   width: 75vw;
   margin: 0 auto;
   position: relative;

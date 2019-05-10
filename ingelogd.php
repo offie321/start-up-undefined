@@ -50,6 +50,7 @@ if (isset($_SESSION['user'])) {
 <button class="tablink hover-underline-animation" onclick="openPage('Contact', this, '#222222')">Contact</button>
 <button class="tablink hover-underline-animation" onclick="openPage('About', this, '#222222')">About</button>
 </div>
+<!-- tab 1 -->
 <div id="Home" class="tabcontent">
   <h3>Home</h3>
   <?php echo "<h1> Welkom". " ".$_SESSION['user']." " ."op deze pagina </h1>" ?>
@@ -57,16 +58,40 @@ if (isset($_SESSION['user'])) {
   <a class="uitlog-knop" href="logout.php">uitloggen</a>
 </div>
 
+<!-- tab 2 -->
 <div id="News" class="tabcontent">
+  <form class="addcontent-form" action="index.html" method="post">
+
   <h3>Add new Items</h3>
-  <p>WURD UN GEWURKT</p>
+  <label for="">Naam</label>
+  <br>
+  <input type="text" name="" value="Titel">
+  <br>
+  <label for="">Informatie</label>
+  <br>
+  <textarea name="name" rows="8" cols="80"></textarea>
+  <br>
+  <label for="">Informatie</label>
+  <br>
+  <textarea name="name" rows="8" cols="80"></textarea>
+  <br>
+  <label for="">Informatie</label>
+  <br>
+  <textarea name="name" rows="8" cols="80"></textarea>
+
+
+</form>
 </div>
 
+<div class="spacer"></div>
+
+<!-- tab 3 -->
 <div id="Contact" class="tabcontent">
   <h3>.....</h3>
   <p>Get in touch, or swing by for a cup of coffee.</p>
 </div>
 
+<!-- tab 4 -->
 <div id="About" class="tabcontent">
   <h3>....</h3>
   <p>Who we are and what we do.</p>
