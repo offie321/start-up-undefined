@@ -43,6 +43,7 @@ if (isset($_SESSION['user'])) {
      <div class="spacer"></div>
      <div class="spacer"></div>
 
+<h1 class="dashboard-title" >Dashboard</h1>
 
 <div class="boxbtns">
 <button class="tablink hover-underline-animation" onclick="openPage('Home', this, '#333333')" id="defaultOpen">Home</button>
@@ -60,7 +61,7 @@ if (isset($_SESSION['user'])) {
 
 <!-- tab 2 -->
 <div id="News" class="tabcontent">
-  <form class="addcontent-form" action="index.html" method="post">
+  <form class="addcontent-form" action="" method="get">
   <h3>Add new Items</h3>
   <label for="">Naam</label>
   <br>
@@ -88,9 +89,8 @@ if (isset($_SESSION['user'])) {
     <option value="">9</option>
     <option value="">10</option>
   </select>
-
-
-<div class="spacer"></div>
+  <br><br>
+<input type="submit" name="" value="Send">
 </form>
 </div>
 
@@ -107,7 +107,7 @@ if (isset($_SESSION['user'])) {
   <p>Who we are and what we do.</p>
 </div>
 
-
+<div class="spacer"></div>
 
 
 <script>
