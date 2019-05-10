@@ -12,18 +12,7 @@ if ($conn->connect_error) {
 }
 ?>
 
-<?php
-session_start();
-if ($_SESSION['ingelogd'] = true) {
-  if (isset($_SESSION['user'])) {
-    $user = $_SESSION['user'];
-  }
-  if (!isset($_SESSION['user'])) {
-    $_SESSION['user'] = "";
-  }
-}
 
- ?>
 
 <!doctype html>
 <html lang="en">
@@ -59,7 +48,6 @@ if ($_SESSION['ingelogd'] = true) {
           <a class="hover-underline-animation"  href="#">Page 2</a>
           <a class="hover-underline-animation"  href="#">Page 3</a>
           <a class="hover-underline-animation" href="login.php">Login</a>
-          <?php echo "<a style='float:right;' class='hover-underline-animation' href='ingelogd.php'>".$_SESSION['user']."</a>" ?>
         </nav>
       </div>
     </header>
