@@ -176,12 +176,14 @@ margin: 0 auto;
 }
 
 .boxbtns{
+  position: static;
   display: flex;
   justify-content: space-around;
   width: 75vw;
   margin: 0 auto;
   margin-bottom: 15px;
   background-color: #888888;
+  border-radius: 25px;
 }
 
 .tablink:hover {
@@ -192,11 +194,12 @@ margin: 0 auto;
 .tabcontent {
   color: white;
   display: none;
-  padding: 100px 20px;
+  padding: 50px;
   width: 75vw;
   margin: 0 auto;
   position: relative;
   overflow-y: auto;
+  height: 60vh;
 }
 
 #Home, #News, #Contact, #About {background-color: #777777;}

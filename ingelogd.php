@@ -45,10 +45,10 @@ if (isset($_SESSION['user'])) {
 
 
 <div class="boxbtns">
-<button class="tablink hover-underline-animation" onclick="openPage('Home', this, '#222222')" id="defaultOpen">Home</button>
-<button class="tablink hover-underline-animation" onclick="openPage('News', this, '#222222')">Add Item</button>
-<button class="tablink hover-underline-animation" onclick="openPage('Contact', this, '#222222')">Contact</button>
-<button class="tablink hover-underline-animation" onclick="openPage('About', this, '#222222')">About</button>
+<button class="tablink hover-underline-animation" onclick="openPage('Home', this, '#333333')" id="defaultOpen">Home</button>
+<button class="tablink hover-underline-animation" onclick="openPage('News', this, '#333333')">Add Item</button>
+<button class="tablink hover-underline-animation" onclick="openPage('Contact', this, '#333333')">Contact</button>
+<button class="tablink hover-underline-animation" onclick="openPage('About', this, '#333333')">About</button>
 </div>
 <!-- tab 1 -->
 <div id="Home" class="tabcontent">
@@ -61,29 +61,28 @@ if (isset($_SESSION['user'])) {
 <!-- tab 2 -->
 <div id="News" class="tabcontent">
   <form class="addcontent-form" action="index.html" method="post">
-
   <h3>Add new Items</h3>
   <label for="">Naam</label>
   <br>
   <input type="text" name="" value="Titel">
   <br>
-  <label for="">Informatie</label>
+  <label for="">Img link <small>bv. plaatje.jpg</small></label>
   <br>
   <textarea name="name" rows="8" cols="80"></textarea>
   <br>
   <label for="">Informatie</label>
   <br>
-  <textarea name="name" rows="8" cols="80"></textarea>
+  <textarea name="" rows="8" cols="80"></textarea>
   <br>
-  <label for="">Informatie</label>
+  <label for="">Rating <small>Max. 10</small></label>
   <br>
-  <textarea name="name" rows="8" cols="80"></textarea>
+  <input type="number" limit="10" name="" value="">
 
 
+<div class="spacer"></div>
 </form>
 </div>
 
-<div class="spacer"></div>
 
 <!-- tab 3 -->
 <div id="Contact" class="tabcontent">
