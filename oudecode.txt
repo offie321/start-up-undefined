@@ -1,0 +1,21 @@
+<?php
+session_start();
+if ($_SESSION['ingelogd'] = true) {
+  if (isset($_SESSION['user'])) {
+    $user = $_SESSION['user'];
+  }
+  if (!isset($_SESSION['user'])) {
+    $_SESSION['user'] = "";
+  }
+}
+
+ ?>
+
+ was voor displayen van username op index.php
+
+
+
+
+ <?php echo "<a style='float:right;' class='hover-underline-animation' href='ingelogd.php'>".$_SESSION['user']."</a>" ?>
+
+ stond in nav 
