@@ -68,15 +68,26 @@ if (isset($_SESSION['user'])) {
   <br>
   <label for="">Img link <small>bv. plaatje.jpg</small></label>
   <br>
-  <textarea name="name" rows="8" cols="80"></textarea>
+  <input type="text" name="" value="img.jpg">
   <br>
-  <label for="">Informatie</label>
+  <label for="">Informatie <small>Korte beschrijving van het item</small></label>
   <br>
   <textarea name="" rows="8" cols="80"></textarea>
   <br>
   <label for="">Rating <small>Max. 10</small></label>
   <br>
-  <input type="number" limit="10" name="" value="">
+  <select class="" name="">
+    <option value="">1</option>
+    <option value="">2</option>
+    <option value="">3</option>
+    <option value="">4</option>
+    <option value="">5</option>
+    <option value="">6</option>
+    <option value="">7</option>
+    <option value="">8</option>
+    <option value="">9</option>
+    <option value="">10</option>
+  </select>
 
 
 <div class="spacer"></div>
