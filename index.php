@@ -1,15 +1,5 @@
 <?php
-//Stap 1
- $servername = "localhost";
- $username = "root";
- $password = "";
- $database = "startup-undefined";
- //Create connection
- $conn = new mysqli($servername, $username, $password, $database);
-//Check connection
-if ($conn->connect_error) {
-  die("connection failed" . $conn->connect_error);
-}
+require("dbconnect.php");
 ?>
 
 

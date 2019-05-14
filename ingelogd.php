@@ -6,10 +6,11 @@ if ($_SESSION['ingelogd'] != true) {
   header("Location: login.php");
 }
 
-//werkt als je hier je input neerzet maar haalt het niet uit een vorige session
+//werkt als je hier je input neerzet maar haalt het niet uit een vorige session (was al opgelost met code uit oudecode.txt bestand?? toch??)
 if (isset($_SESSION['user'])) {
   $user = $_SESSION['user'];
 }
+
 
  ?>
 
@@ -61,36 +62,36 @@ if (isset($_SESSION['user'])) {
 
 <!-- tab 2 -->
 <div id="News" class="tabcontent">
-  <form class="addcontent-form" action="" method="get">
+  <form class="addcontent-form" action="add_item.php" method="post">
   <h3>Add new Items</h3>
   <label for="">Naam</label>
   <br>
-  <input type="text" name="" value="Titel">
+  <input type="text" name="titel" value="Titel">
   <br>
   <label for="">Img link <small>bv. plaatje.jpg</small></label>
   <br>
-  <input type="text" name="" value="img.jpg">
+  <input type="text" name="plaatjes" value="img.jpg">
   <br>
   <label for="">Informatie <small>Korte beschrijving van het item</small></label>
   <br>
-  <textarea name="" rows="8" cols="80"></textarea>
+  <textarea name="omschrijving" rows="8" cols="80"></textarea>
   <br>
   <label for="">Rating <small>Max. 10</small></label>
   <br>
-  <select class="" name="">
-    <option value="">1</option>
-    <option value="">2</option>
-    <option value="">3</option>
-    <option value="">4</option>
-    <option value="">5</option>
-    <option value="">6</option>
-    <option value="">7</option>
-    <option value="">8</option>
-    <option value="">9</option>
-    <option value="">10</option>
+  <select class="ranking" name="ranking">
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
+    <option value="6">6</option>
+    <option value="7">7</option>
+    <option value="8">8</option>
+    <option value="9">9</option>
+    <option value="10">10</option>
   </select>
   <br><br>
-<input type="submit" name="" value="Send">
+<input type="submit" name="send-itemaddform" value="Send">
 </form>
 </div>
 
