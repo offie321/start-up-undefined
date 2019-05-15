@@ -20,8 +20,12 @@ if (isset($_SESSION['user'])) {
      <meta charset="utf-8">
      <title>ingelogd php</title>
 
-     <!-- css -->
+     <!-- Font awesome -->
+     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
      <link rel="stylesheet" href="css/style.css">
+
+     <script type="text/javascript" src="js/script.js"></script>
 
      <!-- fonts -->
      <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
@@ -31,14 +35,28 @@ if (isset($_SESSION['user'])) {
      <header>
 
        <!-- nav -->
-       <div class="nav-container">
-         <nav>
-           <a class="hover-underline-animation"  href="index.php">Home</a>
-           <a class="hover-underline-animation"  href="#">Page 2</a>
-           <a class="hover-underline-animation"  href="#">Page 3</a>
-           <a class="hover-underline-animation" href="login.php">Login</a>
-         </nav>
-       </div>
+       <div id="mobile-headerbar">
+   <a onclick="showMenu()"><i class="fas fa-bars"></i></a>
+ </div>
+
+ <div class="nav-container">
+   <nav id="desktop-nav">
+     <a class="hover-underline-animation"  href="index.php">Home</a>
+     <a class="hover-underline-animation"  href="#">Page 2</a>
+     <a class="hover-underline-animation"  href="#">Page 3</a>
+     <a class="hover-underline-animation" href="login.php">Login</a>
+   </nav>
+ </div>
+
+ <nav id="nav-mobile">
+   <div id="mobile-headerbar">
+     <i onclick="hideMenu()" class="fas fa-times"></i>
+   </div>
+   <a href="index.php">Home</a>
+   <a href="#">Page 2</a>
+   <a href="#">page 3</a>
+   <a href="login.php">Login</a>
+ </nav>
 
      </header>
      <div class="spacer"></div>
@@ -64,7 +82,7 @@ if (isset($_SESSION['user'])) {
 <div id="News" class="tabcontent">
   <form class="addcontent-form" action="add_item.php" method="post">
   <h3>Add new Items</h3>
-  <label for="">Naam</label>
+  <label for="">Naam <small>' gives error</small></label>
   <br>
   <input type="text" name="titel" value="Titel">
   <br>
@@ -72,13 +90,17 @@ if (isset($_SESSION['user'])) {
   <br>
   <input type="text" name="plaatjes" value="img.jpg">
   <br>
-  <label for="">Informatie <small>Korte beschrijving van het item</small></label>
+  <label for="">Genre <small>bv. RPG, FPS, MOBA</small></label>
   <br>
-  <textarea name="omschrijving" rows="8" cols="80"></textarea>
+  <input type="text" name="genre" value="RPG">
+  <br>
+  <label for="">Informatie <small>Grote beschrijving van het item</small></label>
+  <br>
+  <textarea name="omschrijvingbig" rows="8" cols="80"></textarea>
   <br>
   <label for="">Rating <small>Max. 10</small></label>
   <br>
-  <select class="ranking" name="ranking">
+  <select class="ranking-input" name="ranking">
     <option value="1">1</option>
     <option value="2">2</option>
     <option value="3">3</option>

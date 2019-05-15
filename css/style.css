@@ -34,6 +34,28 @@ body{
   background-color: #23272a;
 }
 
+#nav-mobile{
+  display: none;
+}
+
+#mobile-headerbar{
+  display: none;
+  height: 50px;
+  position: fixed;
+  z-index: 100;
+  width: 100vw;
+  background-color: rgba(0,0,0, 0.7);
+  color: white;
+}
+
+#mobile-headerbar i{
+  line-height: 50px;
+  position: absolute;
+  left: 50px;
+  cursor: pointer;
+  font-size: 30px;
+}
+
 
 .nav-container{
   position: fixed;
@@ -41,7 +63,7 @@ body{
   background-color: rgba(119,119,119, 0.9);
   z-index: 100;
 }
-nav{
+#desktop-nav{
   position: relative;
   margin: 0 auto;
   display: flex;
@@ -52,16 +74,58 @@ nav{
   z-index: 99;
 }
 
-nav a{
+#desktop-nav a{
   text-decoration: none;
   color: black;
   line-height: 60px;
 }
 
-nav a .right{
+#desktop-nav a .right{
   float: right;
 }
 
+#nav-mobile{
+  height: 100vh;
+  width: 100vw;
+  text-align: center;
+  background-color: grey;
+  z-index: 100;
+  position: fixed;
+  animation: 0.6s openmobNav ease-out;
+}
+
+#nav-mobile #mobile-headerbar{
+ position: relative;
+ color: white ;
+ font-size: 30px;
+}
+
+@keyframes openmobNav {
+  0%{
+    transform: translateX(-50vw);
+  }
+
+  60%{
+    transform: translateX(00px);
+  }
+
+  100%{
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+#nav-mobile a{
+  display: grid;
+  grid-template-rows: auto auto auto;
+  width: 50vw;
+  margin: 0 auto;
+  text-align:  center;
+  text-decoration: none;
+  color: black;
+  font-size: 25px;
+  padding-top: 15px;
+}
 
 
 /*Height needs to be removed*/
@@ -75,6 +139,10 @@ grid-template-columns:auto auto auto auto;
 width: 90vw;
 grid-gap: 15px;
 margin: 0 auto;
+}
+
+.a-cards-container a{
+  text-decoration: none;
 }
 
 .a-cards-container .a-cards{
@@ -123,6 +191,13 @@ margin: 0 auto;
 
 
 /* ---------login--------- */
+
+/*loginscreen bg*/
+.loginscreen-bg{
+  background-image: url("../img/minecraft.jpg");
+  background-position: center;
+}
+
 .login-titel{
   text-align: center;
   color: white;
@@ -135,7 +210,7 @@ margin: 0 auto;
   max-width: 400px;
   margin: 0 auto;
   color: white;
-  background-color: #666666;
+  background-color: rgba(102, 102, 102, 0.8);
   border-radius: 25px;
 }
 
@@ -163,6 +238,7 @@ margin: 0 auto;
 
 }
 
+
 .addcontent-form input, .addcontent-form textarea, .addcontent-form select{
   background-color: #555;
   border: 1px solid #444;
@@ -170,7 +246,52 @@ margin: 0 auto;
 }
 
 .addcontent-form textarea{
-  width: 500px;
+  max-width: 40vw;
+}
+
+/* Game specifiek page */
+.titel_gamespecifiek{
+  color: white;
+  text-align: center;
+  font-size: 50px;
+}
+
+.genre_gamespecifiek{
+  color: darkgrey;
+  text-align: center;
+}
+
+.img-gamespecifiek{
+  display: block;
+  margin: 0 auto;
+  width: 80%;
+}
+
+
+.hr_gamespecifiek {
+  width: 60%;
+}
+
+
+.omschrijving_big_gamespecifiek{
+width: 75vw;
+max-width: 1200px;
+margin: 0 auto;
+color: lightgrey;
+text-align: left;
+}
+
+.omschrijving_big_gamespecifiek h1{
+  font-family: 'Press Start 2P', cursive;
+  text-align: center;
+  color: white;
+}
+
+.omschrijving_big_gamespecifiek h3{
+  font-family: 'Press Start 2P', cursive;
+  text-decoration: underline;
+  text-align: left;
+  color: white;
 }
 
 /* Style tab links */
@@ -341,12 +462,41 @@ hr {
   grid-template-columns: auto auto auto;
 }
 
+/*gamespecifiek*/
+.titel_gamespecifiek{
+  color: white;
+  text-align: center;
+  font-size: 30px;
+}
+
+.genre_gamespecifiek{
+  color: darkgrey;
+  text-align: center;
+}
+
+.img-gamespecifiek{
+  display: block;
+  margin: 0 auto;
+  width: 90%;
+}
+
+.omschrijving_big_gamespecifiek{
+width: 85vw;
+margin: 0 auto;
+color: white;
+}
 
 }
 
 @media only screen and (max-width:1100px) {
   .a-cards-container{
     grid-template-columns: auto auto;
+  }
+
+  .img-gamespecifiek{
+    display: block;
+    margin: 0 auto;
+    width: 100%;
   }
 
   .footer-container{
@@ -365,7 +515,7 @@ hr {
   border: none;
   padding: 0;
   padding-top: 25px;
-} 
+}
 
 .footer-list:nth-child(2){
   border: none;
@@ -382,6 +532,73 @@ hr {
   .a-cards-container{
     grid-template-columns: auto;
   }
+
+  #desktop-nav{
+    display: none;
+  }
+
+  #mobile-headerbar{
+    display: block;
+  }
+
+  #nav-mobile{
+  display: none;
+}
+
+.login-form{
+  text-align: center;
+  padding: 15px;
+  max-width: 250px;
+  margin: 0 auto;
+  color: white;
+  background-color: rgba(102, 102, 102, 0.8);
+  border-radius: 25px;
+}
+
+.login-form input{
+  margin: 25px;
+  background-color: #444444;
+  border: 2px solid grey;
+  padding: 5px;
+  width: 50%;
+  text-align: center;
+  border-radius: 25px;
+  color: lightgrey;
+}
+
+.tablink {
+  background-color: #555;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 10px;
+  width: auto;
+  position: relative;
+}
+
+.boxbtns{
+  position: static;
+  display: flex;
+  justify-content: space-around;
+  width: 90vw;
+  margin: 0 auto;
+  margin-bottom: 15px;
+  border-radius:0px;
+}
+
+.tabcontent {
+  color: white;
+  display: none;
+  padding: 50px;
+  width: 250px;
+  margin: 0 auto;
+  position: relative;
+  border-radius: 0px;
+}
+
 }
 
 @media only screen and (max-width:400px) {

@@ -18,6 +18,8 @@ require("dbconnect.php");
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
     <link rel="stylesheet" href="css/style.css">
+
+    <script type="text/javascript" src="js/script.js"></script>
     <title>Hello, world!</title>
   </head>
   <body>
@@ -32,14 +34,30 @@ require("dbconnect.php");
       -->
 
       <!-- nav -->
-      <div class="nav-container">
-        <nav>
-          <a class="hover-underline-animation"  href="index.php">Home</a>
-          <a class="hover-underline-animation"  href="#">Page 2</a>
-          <a class="hover-underline-animation"  href="#">Page 3</a>
-          <a class="hover-underline-animation" href="login.php">Login</a>
-        </nav>
-      </div>
+
+      <div id="mobile-headerbar">
+  <a onclick="showMenu()"><i class="fas fa-bars"></i></a>
+</div>
+
+<div class="nav-container">
+  <nav id="desktop-nav">
+    <a class="hover-underline-animation"  href="index.php">Home</a>
+    <a class="hover-underline-animation"  href="#">Page 2</a>
+    <a class="hover-underline-animation"  href="#">Page 3</a>
+    <a class="hover-underline-animation" href="login.php">Login</a>
+  </nav>
+</div>
+
+<nav id="nav-mobile">
+  <div id="mobile-headerbar">
+    <i onclick="hideMenu()" class="fas fa-times"></i>
+  </div>
+  <a href="index.php">Home</a>
+  <a href="#">Page 2</a>
+  <a href="#">page 3</a>
+  <a href="login.php">Login</a>
+</nav>
+
     </header>
     <div class="spacer"></div>
 
@@ -51,15 +69,15 @@ require("dbconnect.php");
   <?php
   //Stap 2, 3 en 4
   $sql =
-  "SELECT games.titel, games.plaatjes, games.omschrijving, games.ranking, games.id
+  "SELECT games.titel, games.plaatjes, games.genre, games.ranking, games.id, games.omschrijvingbig
   FROM games
-  LIMIT 8;
+  LIMIT 100;
 
   ";
   if ($result = $conn->query($sql)) { //2
     // Pak elke keer een rij uit het resultaat en maak er een array van.
     while ($row = $result->fetch_row()) {
-      echo "<article class='a-cards'>"."<img src='img/".$row[1]."'/>". "</br>".$row[0]. "<hr>"."</br>".$row[2]. "<br><br><p>Ranking</p>". "<div class='ranking'>".$row[3]."</div>"."</article>"; //3
+      echo "<a href='game.php?id=".$row[4]."'><article class='a-cards'>"."<img src='img/".$row[1]."'/>". "</br>".$row[0]. "<hr>"."</br>".$row[2]. "<br><br><p>Ranking</p>". "<div class='ranking'>".$row[3]."</div>"."</article></a>"; //3
     }
     $result->close(); //4
   }

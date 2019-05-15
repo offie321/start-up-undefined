@@ -36,25 +36,43 @@ if (isset($_POST['submit'])) {
     <meta charset="utf-8">
     <title></title>
 
-    <!-- css -->
+    <!-- Font awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
     <link rel="stylesheet" href="css/style.css">
+
+    <script type="text/javascript" src="js/script.js"></script>
 
     <!-- fonts -->
     <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
 
   </head>
-  <body>
+  <body class="loginscreen-bg">
 
     <header>
       <!-- nav -->
-      <div class="nav-container">
-        <nav>
-          <a class="hover-underline-animation"  href="index.php">Home</a>
-          <a class="hover-underline-animation"  href="login.php">Page 2</a>
-          <a class="hover-underline-animation"  href="#">Page 3</a>
-          <a class="hover-underline-animation" href="#">Login</a>
-        </nav>
-      </div>
+      <div id="mobile-headerbar">
+  <a onclick="showMenu()"><i class="fas fa-bars"></i></a>
+</div>
+
+<div class="nav-container">
+  <nav id="desktop-nav">
+    <a class="hover-underline-animation"  href="index.php">Home</a>
+    <a class="hover-underline-animation"  href="#">Page 2</a>
+    <a class="hover-underline-animation"  href="#">Page 3</a>
+    <a class="hover-underline-animation" href="login.php">Login</a>
+  </nav>
+</div>
+
+<nav id="nav-mobile">
+  <div id="mobile-headerbar">
+    <i onclick="hideMenu()" class="fas fa-times"></i>
+  </div>
+  <a href="index.php">Home</a>
+  <a href="#">Page 2</a>
+  <a href="#">page 3</a>
+  <a href="login.php">Login</a>
+</nav>
 
     </header>
     <div class="spacer"></div>
