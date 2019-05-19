@@ -24,6 +24,7 @@ if (isset($_SESSION['user'])) {
      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
      <link rel="stylesheet" href="css/style.css">
+     <link rel="icon" href="img/logo.jpg" type="image/gif" sizes="16x16">
 
      <script type="text/javascript" src="js/script.js"></script>
 
@@ -41,9 +42,10 @@ if (isset($_SESSION['user'])) {
 
  <div class="nav-container">
    <nav id="desktop-nav">
+         <a class="logo"></a>
      <a class="hover-underline-animation"  href="index.php">Home</a>
-     <a class="hover-underline-animation"  href="#">Page 2</a>
-     <a class="hover-underline-animation"  href="#">Page 3</a>
+     <a class="hover-underline-animation"  href="allgames.php">All Games</a>
+     <a class="hover-underline-animation"  href="contact.php">Contact</a>
      <a class="hover-underline-animation" href="login.php">Login</a>
    </nav>
  </div>
@@ -53,8 +55,8 @@ if (isset($_SESSION['user'])) {
      <i onclick="hideMenu()" class="fas fa-times"></i>
    </div>
    <a href="index.php">Home</a>
-   <a href="#">Page 2</a>
-   <a href="#">page 3</a>
+   <a href="allgames.php">All Games</a>
+   <a href="contact.php">Contact</a>
    <a href="login.php">Login</a>
  </nav>
 

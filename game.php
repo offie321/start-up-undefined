@@ -12,7 +12,8 @@ $sql = "SELECT * FROM games where id=".$_GET["id"];
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <!-- Laat de naam van de game zien op de tabbladen-->
+    <title>GamesHub | <?php echo $row[1] ?></title>
 
     <!-- fonts -->
     <link href="https://fonts.googleapis.com/css?family=Anton|Poppins" rel="stylesheet">
@@ -22,8 +23,12 @@ $sql = "SELECT * FROM games where id=".$_GET["id"];
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
     <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="img/logo.jpg" type="image/gif" sizes="16x16">
 
     <script type="text/javascript" src="js/script.js"></script>
+    <style media="screen">
+      * {box-sizing: border-box}
+    </style>
   </head>
   <body>
 
@@ -35,9 +40,10 @@ $sql = "SELECT * FROM games where id=".$_GET["id"];
 
 <div class="nav-container">
   <nav id="desktop-nav">
+        <a class="logo"></a>
     <a class="hover-underline-animation"  href="index.php">Home</a>
-    <a class="hover-underline-animation"  href="#">Page 2</a>
-    <a class="hover-underline-animation"  href="#">Page 3</a>
+    <a class="hover-underline-animation"  href="allgames.php">All Games</a>
+    <a class="hover-underline-animation"  href="contact.php">Contact</a>
     <a class="hover-underline-animation" href="login.php">Login</a>
   </nav>
 </div>
@@ -47,8 +53,8 @@ $sql = "SELECT * FROM games where id=".$_GET["id"];
     <i onclick="hideMenu()" class="fas fa-times"></i>
   </div>
   <a href="index.php">Home</a>
-  <a href="#">Page 2</a>
-  <a href="#">page 3</a>
+  <a href="allgames.php">All Games</a>
+  <a href="contact.php">Contact</a>
   <a href="login.php">Login</a>
 </nav>
 
@@ -62,6 +68,7 @@ $sql = "SELECT * FROM games where id=".$_GET["id"];
       <div class="spacer"></div>
       <?php   echo "<article class='omschrijving_big_gamespecifiek'>".  $row[5] ."</article>";   ?>
       <div class="spacer"></div><div class="spacer"></div><div class="spacer"></div>
+      <?php   echo "<p class='releasedate_gamespecifiek'>Release date:</p><p class='releasedate_gamespecifiek'>".  $row[6] ."</p>";   ?>
     </div>
 
   </body>
