@@ -27,8 +27,6 @@ require("dbconnect.php");
     <header>
       <br>
 
-
-
       <!-- nav -->
 
       <div id="mobile-headerbar">
@@ -62,6 +60,8 @@ require("dbconnect.php");
 
 
 <!-- Content -->
+
+<!-- All games link to a specific page with information about the game -->
 <div class="a-cards-container">
   <?php
   //Stap 2, 3 en 4

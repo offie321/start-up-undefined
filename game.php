@@ -22,10 +22,16 @@ $sql = "SELECT * FROM games where id=".$_GET["id"];
     <!-- Font awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="css/style.css">
+    <!-- Favicon -->
     <link rel="icon" href="img/logo.jpg" type="image/gif" sizes="16x16">
 
+    <!-- Link to Main Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Scripts -->
     <script type="text/javascript" src="js/script.js"></script>
+
+    
     <style media="screen">
       * {box-sizing: border-box}
     </style>
@@ -59,15 +65,20 @@ $sql = "SELECT * FROM games where id=".$_GET["id"];
 </nav>
 
     </header>
-
+<!-- Information about this game -->
     <div class"game_specifiek_container">
+      <!-- Image -->
       <?php echo "<img class='img-gamespecifiek' src='img/".$row[2]."'/>"; ?>
+      <!-- Title -->
       <?php   echo "<p class='titel_gamespecifiek'>".  $row[1] ."</p>";   ?>
+      <!-- Genre -->
       <?php   echo "<p class='genre_gamespecifiek'>".  $row[3] ."</p>";   ?>
       <hr class="hr_gamespecifiek">
       <div class="spacer"></div>
+      <!-- Information -->
       <?php   echo "<article class='omschrijving_big_gamespecifiek'>".  $row[5] ."</article>";   ?>
       <div class="spacer"></div><div class="spacer"></div><div class="spacer"></div>
+      <!-- Release Date -->
       <?php   echo "<p class='releasedate_gamespecifiek'>Release date:</p><p class='releasedate_gamespecifiek'>".  $row[6] ."</p>";   ?>
     </div>
 

@@ -6,8 +6,8 @@ require("dbconnect.php");
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
-    <meta name="description" content="Free Web tutorials">
-    <meta name="keywords" content="Games, GamesHub, ">
+    <meta name="description" content="Webpage with information about games">
+    <meta name="keywords" content="Games, GamesHub, Information, FPS, MMO, MMO-FPS, Adventure">
     <meta name="author" content="Jelmer van Ofwegen">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -18,12 +18,17 @@ require("dbconnect.php");
     <!-- Font awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
+    <!-- Link to Main Stylesheet -->
     <link rel="stylesheet" href="css/style.css">
 
-    <script type="text/javascript" src="js/script.js"></script>
-    <title>GamesHub</title>
+    <!-- Favicon -->
+    <link rel="icon" href="img/logo.jpg" type="image/gif" sizes="16x16">
 
-     <link rel="icon" href="img/logo.jpg" type="image/gif" sizes="16x16">
+    <!-- scripts -->
+    <script type="text/javascript" src="js/script.js"></script>
+
+    <!-- Title -->
+    <title>GamesHub</title>
 
     <style media="screen">
       * {box-sizing: border-box}
@@ -31,35 +36,31 @@ require("dbconnect.php");
   </head>
   <body>
     <header>
-
-
-
-
       <!-- nav -->
 
       <div id="mobile-headerbar">
-  <a onclick="showMenu()"><i class="fas fa-bars"></i></a>
-</div>
+        <a onclick="showMenu()"><i class="fas fa-bars"></i></a>
+      </div>
 
-<div class="nav-container">
-  <nav id="desktop-nav">
-        <a class="logo"></a>
-    <a class="hover-underline-animation"  href="index.php">Home</a>
-    <a class="hover-underline-animation"  href="allgames.php">All Games</a>
-    <a class="hover-underline-animation"  href="contact.php">Contact</a>
-    <a class="hover-underline-animation" href="login.php">Login</a>
-  </nav>
-</div>
+      <div class="nav-container">
+        <nav id="desktop-nav">
+          <a class="logo"></a>
+          <a class="hover-underline-animation"  href="index.php">Home</a>
+          <a class="hover-underline-animation"  href="allgames.php">All Games</a>
+          <a class="hover-underline-animation"  href="contact.php">Contact</a>
+          <a class="hover-underline-animation" href="login.php">Login</a>
+        </nav>
+      </div>
 
-<nav id="nav-mobile">
-  <div id="mobile-headerbar">
-    <i onclick="hideMenu()" class="fas fa-times"></i>
-  </div>
-  <a href="index.php">Home</a>
-  <a href="allgames.php">All Games</a>
-  <a href="contact.php">Contact</a>
-  <a href="login.php">Login</a>
-</nav>
+      <nav id="nav-mobile">
+        <div id="mobile-headerbar">
+          <i onclick="hideMenu()" class="fas fa-times"></i>
+        </div>
+        <a href="index.php">Home</a>
+        <a href="allgames.php">All Games</a>
+        <a href="contact.php">Contact</a>
+        <a href="login.php">Login</a>
+      </nav>
 
     </header>
     <br>
@@ -90,7 +91,7 @@ require("dbconnect.php");
     </div>
 
     <div class="spacer"></div>
-
+<!-- Welkom tekst -->
     <article class="home-welkom">
       <p>
         <h2>Welkom bij GamesHub,</h2><br><br>
@@ -100,9 +101,9 @@ require("dbconnect.php");
 
       </p>
     </article>
-    <div class="spacer"></div><div class="spacer"></div>
+    <div class="spacer"></div>
 <hr class="small-hr">
-<div class="spacer"></div><div class="spacer"></div><div class="spacer"></div>
+<div class="spacer"></div><div class="spacer"></div>
 
 <!-- Content -->
 
@@ -155,26 +156,26 @@ require("dbconnect.php");
 <div class="spacer"></div>
 
 <!-- Footer -->
-<footer>
+<footer id="footer">
   <br>
   <div class="footer-container">
 
     <ul class="footer-list">
-      <li><b><h3 class="h3-ftr-logo"> Gaming </h3></b></li>
+      <li><b><h3 class="h3-ftr-logo"> GamesHub </h3></b></li>
       <li>
         <p>
           <br>
-          blabla Lorem Ipsum blablabla
+          De beste games vind je bij GamesHub
         </p>
       </li>
     </ul>
 
       <ul class="footer-list">
         <li><b><h3> Pages </h3></b></li>
-        <a href="skills.html"><li> My skills </li></a>
-        <a href="projects.html"><li> My Projects </li></a>
-        <a href="wiebenik.html"><li> Who am I </li></a>
-        <a href="skills.html"><li> My skills </li></a>
+        <a href="allgames.php"><li> All Games </li></a>
+        <a href="contact.php"><li> Contact </li></a>
+        <a href="login.php"><li> Login </li></a>
+        <a onclick="pikaPika()"><li> pikaPika </li></a>
       </ul>
 
       <ul class="footer-list">
