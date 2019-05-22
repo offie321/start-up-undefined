@@ -31,7 +31,7 @@ $sql = "SELECT * FROM games where id=".$_GET["id"];
     <!-- Scripts -->
     <script type="text/javascript" src="js/script.js"></script>
 
-    
+
     <style media="screen">
       * {box-sizing: border-box}
     </style>
@@ -46,7 +46,7 @@ $sql = "SELECT * FROM games where id=".$_GET["id"];
 
 <div class="nav-container">
   <nav id="desktop-nav">
-        <a class="logo"></a>
+    <a class="logo" href="index.php"></a>
     <a class="hover-underline-animation"  href="index.php">Home</a>
     <a class="hover-underline-animation"  href="allgames.php">All Games</a>
     <a class="hover-underline-animation"  href="contact.php">Contact</a>

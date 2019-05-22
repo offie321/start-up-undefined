@@ -17,19 +17,31 @@ if (isset($_SESSION['user'])) {
  <!DOCTYPE html>
  <html lang="en" dir="ltr">
    <head>
+     <!-- Required meta tags -->
      <meta charset="utf-8">
-     <title>ingelogd php</title>
+     <meta name="description" content="Webpage with information about games">
+     <meta name="keywords" content="Games, GamesHub, Information, FPS, MMO, MMO-FPS, Adventure">
+     <meta name="author" content="Jelmer van Ofwegen">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     <!-- fonts -->
+     <link href="https://fonts.googleapis.com/css?family=Anton|Poppins" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
 
      <!-- Font awesome -->
      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
+     <!-- Link to Main Stylesheet -->
      <link rel="stylesheet" href="css/style.css">
+
+     <!-- Favicon -->
      <link rel="icon" href="img/logo.jpg" type="image/gif" sizes="16x16">
 
+     <!-- scripts -->
      <script type="text/javascript" src="js/script.js"></script>
 
-     <!-- fonts -->
-     <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+     <!-- Title -->
+     <title>GamesHub | Logged In</title>
    </head>
    <body>
 
@@ -42,7 +54,7 @@ if (isset($_SESSION['user'])) {
 
  <div class="nav-container">
    <nav id="desktop-nav">
-         <a class="logo"></a>
+     <a class="logo" href="index.php"></a>
      <a class="hover-underline-animation"  href="index.php">Home</a>
      <a class="hover-underline-animation"  href="allgames.php">All Games</a>
      <a class="hover-underline-animation"  href="contact.php">Contact</a>
@@ -70,7 +82,6 @@ if (isset($_SESSION['user'])) {
 <button class="tablink hover-underline-animation" onclick="openPage('Home', this, '#333333')" id="defaultOpen">Home</button>
 <button class="tablink hover-underline-animation" onclick="openPage('News', this, '#333333')">Add Item</button>
 <button class="tablink hover-underline-animation" onclick="openPage('Contact', this, '#333333')">Contact</button>
-<button class="tablink hover-underline-animation" onclick="openPage('About', this, '#333333')">About</button>
 </div>
 <!-- tab 1 -->
 <div id="Home" class="tabcontent">
@@ -114,23 +125,22 @@ if (isset($_SESSION['user'])) {
     <option value="9">9</option>
     <option value="10">10</option>
   </select>
+  <br>
+  <label for="">Releasedate</label>
+  <br>
+  <input type="date" name="releasedate" value="0000-00-00">
   <br><br>
 <input type="submit" name="send-itemaddform" value="Send">
 </form>
 </div>
 
 
-<!-- tab 3 -->
+<!-- tab 3 Not used yet -->
 <div id="Contact" class="tabcontent">
-  <h3>.....</h3>
+  <h3> Not used </h3>
   <p>Get in touch, or swing by for a cup of coffee.</p>
 </div>
 
-<!-- tab 4 -->
-<div id="About" class="tabcontent">
-  <h3>....</h3>
-  <p>Who we are and what we do.</p>
-</div>
 
 <div class="spacer"></div>
 

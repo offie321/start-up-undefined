@@ -44,7 +44,7 @@ require("dbconnect.php");
 
       <div class="nav-container">
         <nav id="desktop-nav">
-          <a class="logo"></a>
+          <a class="logo" href="index.php"></a>
           <a class="hover-underline-animation"  href="index.php">Home</a>
           <a class="hover-underline-animation"  href="allgames.php">All Games</a>
           <a class="hover-underline-animation"  href="contact.php">Contact</a>
@@ -175,7 +175,7 @@ require("dbconnect.php");
         <a href="allgames.php"><li> All Games </li></a>
         <a href="contact.php"><li> Contact </li></a>
         <a href="login.php"><li> Login </li></a>
-        <a onclick="pikaPika()"><li> pikaPika </li></a>
+        <a onclick="pikaPika()"><img style="width: 2px;" src="img/Pikachu.png"></a>
       </ul>
 
       <ul class="footer-list">

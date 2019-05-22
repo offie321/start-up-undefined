@@ -33,20 +33,31 @@ if (isset($_POST['submit'])) {
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
+    <!-- Required meta tags -->
     <meta charset="utf-8">
-    <title>GamesHub | Login</title>
+    <meta name="description" content="Webpage with information about games">
+    <meta name="keywords" content="Games, GamesHub, Information, FPS, MMO, MMO-FPS, Adventure">
+    <meta name="author" content="Jelmer van Ofwegen">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Anton|Poppins" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
 
     <!-- Font awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
+    <!-- Link to Main Stylesheet -->
     <link rel="stylesheet" href="css/style.css">
+
+    <!-- Favicon -->
     <link rel="icon" href="img/logo.jpg" type="image/gif" sizes="16x16">
 
+    <!-- scripts -->
     <script type="text/javascript" src="js/script.js"></script>
 
-    <!-- fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
-
+    <!-- Title -->
+    <title>GamesHub | Login</title>
   </head>
   <body class="loginscreen-bg">
 
@@ -58,7 +69,7 @@ if (isset($_POST['submit'])) {
 
 <div class="nav-container">
   <nav id="desktop-nav">
-        <a class="logo"></a>
+    <a class="logo" href="index.php"></a>
     <a class="hover-underline-animation"  href="index.php">Home</a>
     <a class="hover-underline-animation"  href="allgames.php">All Games</a>
     <a class="hover-underline-animation"  href="contact.php">Contact</a>
